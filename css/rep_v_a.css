@@ -1,0 +1,173 @@
+/* Aplica reglas globales a todos los 
+elementos, incluidos los pseudo-elementos 
+::after y ::before */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 1%;
+    padding: 0%;
+    border: 0%;
+}
+
+/* Define variables CSS en el ámbito 
+global (:root) */
+:root {
+    --oscuro: #212121;
+    --gris: #757575;
+    --grisClaro: #dfe9f3;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    /***************************/
+    --Charcoal: #36454F; 
+    --DeepBlue: #0021f3; 
+    --BlueViolet: #8a2be2; 
+    --NeonGreen: #39ff14; 
+    --MalachiteGreen: #0BDA51; 
+    --CrimsonRed: #990000; 
+    --DeepOrange: #dc4d01;
+    --LightBlue: #87CEEB;
+    --Brown2: #964B00;
+    --DeepPink: #ff1493;
+    --Gold2: #ffbf00;
+}
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+/* width */
+/* ::-webkit-scrollbar {
+    width: auto;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track-piece {
+    background: black;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: var(--NeonGreen);
+    border-radius: 10px;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: aqua;
+} */
+
+html, body {
+    overflow-x: hidden;
+    scrollbar-color: #006ee6 #000000;
+    scrollbar-width: auto;
+}
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+/* Establece el tamaño de fuente 
+base para el documento HTML */
+html {
+    font-size: 62.5%;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Sono', sans-serif;
+    background-color: black;
+    color: white;
+    /* padding: 1vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 1vw 0; */
+    margin: 0;
+}
+
+/* Centrar el contenido de video y audio */
+#video-player, #audio-volume-container, #audio-progress-container, #video-playlist-container, #playlist {
+    text-align: center;
+    margin: 20px auto;
+}
+
+video, audio {
+    max-width: 90%; /* Asegura que el contenido multimedia no sea demasiado ancho */
+    margin: 0 auto;
+}
+
+/* Controles de video y audio */
+#video-controls, #audio-volume-container, #audio-progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+/* Lista de reproducción */
+#video-playlist-container, #playlist {
+    margin-top: 20px;
+}
+
+select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #666;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    body {
+        padding: 2vw; /* Aumenta el padding en pantallas más pequeñas */
+    }
+    
+    video, audio {
+        max-width: 95%; /* Permite que el contenido multimedia ocupe más espacio en pantallas pequeñas */
+    }
+    
+    #video-controls, #audio-volume-container, #audio-progress-container {
+        gap: 5px; /* Reduce el espacio entre controles para pantallas pequeñas */
+        padding: 0 10px; /* Añade un poco de padding para evitar que los controles toquen los bordes */
+    }
+
+    button {
+        padding: 5px; /* Reduce el tamaño del padding en los botones para ahorrar espacio */
+        font-size: 0.8rem; /* Reduce el tamaño de la fuente en los botones */
+    }
+
+    select {
+        padding: 3px; /* Reduce el padding de los selectores para que ocupen menos espacio */
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente para los selectores */
+    }
+}
+
+.linea_horizontal2 {
+    margin: 0 auto;
+    width: 90%; 
+    height: 4px;
+    background-color: white; 
+}
